@@ -1,7 +1,5 @@
 # Track-User-Activity
 
-## [Live](https://mern-realtime-chat-app.netlify.app/)
-
 #### Introduction
 
 This is a full-stack chat application that can be up and running with just a few steps. 

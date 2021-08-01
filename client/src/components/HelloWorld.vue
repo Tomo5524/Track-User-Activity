@@ -102,31 +102,25 @@ export default {
   props: {
     msg: String,
   },
+
   setup() {
+    const logData = async () => {
+      console.log(userBehaviour.showResult());
+      if (document.visibilityState === "hidden") {
+        await navigator.sendBeacon(
+          "http://localhost:5000/user-behaviour",
+          JSON.stringify(userBehaviour.showResult())
+        );
+      }
+    };
     onMounted(async () => {
-      console.log("mounted for the first time!");
+      console.log("mounted for the first time!", logData);
       userBehaviour.start();
       userBehaviour.processResults();
-      document.addEventListener("visibilitychange", function logData() {
-        console.log(userBehaviour.showResult());
-        if (document.visibilityState === "hidden") {
-          navigator.sendBeacon(
-            "http://localhost:5000/user-behaviour",
-            JSON.stringify(userBehaviour.showResult())
-          );
-        }
-      });
+      document.addEventListener("visibilitychange", logData);
     });
     onUnmounted(async () => {
-      document.removeEventListener("visibilitychange", function logData() {
-        console.log(userBehaviour.showResult());
-        if (document.visibilityState === "hidden") {
-          navigator.sendBeacon(
-            "http://localhost:5000/user-behaviour",
-            JSON.stringify(userBehaviour.showResult())
-          );
-        }
-      });
+      document.removeEventListener("visibilitychange", logData);
     });
   },
 };

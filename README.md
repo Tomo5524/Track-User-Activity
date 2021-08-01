@@ -84,4 +84,4 @@ This repository contains beginner level code and might contain some things I wis
 
 -->
 
-Now, you are ready to chat! 💻 🍺 🔥 🙌
+

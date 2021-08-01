@@ -8,7 +8,7 @@ The backend is built with Express.js and Node.js.
 I also used BeaconAPI to send user data to the backend. and the visibilitychange  event listener to use to signal (data) the end of a user's session
 <br/><br/>
 
-### Example of Result
+### User Data
 ```javascript
 {
    "userInfo":{

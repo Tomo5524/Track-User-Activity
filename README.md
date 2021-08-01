@@ -2,7 +2,7 @@
 
 #### Introduction
 
-This is a full-stack chat application that can be up and running with just a few steps. 
+This is a full-stack user behaviour track application that can be up and running with just a few steps. 
 Its frontend is built with Vue 3.
 The backend is built with Express.js and Node.js.
 I also used BeaconAPI to send user data to the backend. and the visibilitychange  event listener to use to signal (data) the end of a user's session

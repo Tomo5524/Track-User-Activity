@@ -2,7 +2,7 @@
 
 #### Introduction
 
-This is a full-stack user behaviour track application that can be up and running with just a few steps. 
+This project is a full-stack user behaviour track application that can be up and running with just a few steps. 
 Its frontend is built with Vue 3.
 The backend is built with Express.js and Node.js.
 I also used BeaconAPI to send user data to the backend in the event of visibilitychange (event listener). User behaviour also gets sent over at the end of a user's session
